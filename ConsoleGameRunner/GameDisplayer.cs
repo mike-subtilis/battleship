@@ -46,6 +46,11 @@ namespace ConsoleGameRunner
                     sb.Append($"Turn #{game.CurrentTurnNumber}: waiting for '{(game.CurrentTurnPlayer == 1 ? game.Player1 : game.Player2)}'");
                     break;
                 case GameStatus.Completed:
+                    sb.AppendLine();
+                    sb.AppendLine(new String('*', game.Winner.Length + 9));
+                    sb.AppendLine(new String(' ', 2) + game.Winner + " WINS");
+                    sb.AppendLine(new String('*', game.Winner.Length + 9));
+                    sb.AppendLine();
                     sb.Append($"Game over: {game.Winner} is the winner!");
                     break;
             }

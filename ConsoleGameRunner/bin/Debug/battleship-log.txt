@@ -13,3 +13,53 @@
 2018-01-03 15:45:11.0935|INFO|ConsoleGameRunner|Player 2 attacked A4
 2018-01-03 15:45:12.0643|INFO|ConsoleGameRunner|Player 1 attacked A5
 2018-01-03 15:45:13.0739|INFO|ConsoleGameRunner|Player 2 attacked A5
+2018-01-03 15:49:52.7118|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:49:52.7838|INFO|ConsoleGameRunner|Created a game between 'Amy Adams' and 'Bob Barkerov'.
+2018-01-03 15:49:55.7357|INFO|ConsoleGameRunner|Player 1 placed a ship at A3-A5
+2018-01-03 15:50:02.1801|INFO|ConsoleGameRunner|Player 2 placed a ship at B8-D8
+2018-01-03 15:50:05.9933|INFO|ConsoleGameRunner|Player 1 attacked B8
+2018-01-03 15:50:09.2401|INFO|ConsoleGameRunner|Player 2 attacked A8
+2018-01-03 15:50:11.6915|INFO|ConsoleGameRunner|Player 1 attacked C8
+2018-01-03 15:50:14.3403|INFO|ConsoleGameRunner|Player 2 attacked D6
+2018-01-03 15:50:17.9605|INFO|ConsoleGameRunner|Player 1 attacked D8
+2018-01-03 15:51:45.9674|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:51:45.9945|INFO|ConsoleGameRunner|Created a game between 'Amy Adams' and 'Bob Barkerov'.
+2018-01-03 15:52:11.1732|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:52:11.1992|INFO|ConsoleGameRunner|Created a game between 'Player 1' and 'Player 2'.
+2018-01-03 15:52:15.1725|INFO|ConsoleGameRunner|Player 1 placed a ship at A3-A5
+2018-01-03 15:52:18.6777|INFO|ConsoleGameRunner|Player 2 placed a ship at D6-F6
+2018-01-03 15:52:22.7211|INFO|ConsoleGameRunner|Player 1 attacked A4
+2018-01-03 15:52:24.8162|INFO|ConsoleGameRunner|Player 2 attacked A4
+2018-01-03 15:52:31.3268|INFO|ConsoleGameRunner|Player 1 attacked F2
+2018-01-03 15:52:33.8973|INFO|ConsoleGameRunner|Player 2 attacked A3
+2018-01-03 15:52:38.2671|INFO|ConsoleGameRunner|Player 1 attacked D3
+2018-01-03 15:52:41.7873|INFO|ConsoleGameRunner|Player 2 attacked A5
+2018-01-03 15:52:54.6023|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:52:54.6293|INFO|ConsoleGameRunner|Created a game between 'Amy Adams' and 'Bob Barkerov'.
+2018-01-03 15:53:06.2110|WARN|ConsoleGameRunner|An error occurred placing a ship: Diagonals are not allowed.
+2018-01-03 15:53:10.6711|INFO|ConsoleGameRunner|Player 1 placed a ship at A7-C7
+2018-01-03 15:53:17.8578|INFO|ConsoleGameRunner|Player 2 placed a ship at D2-D4
+2018-01-03 15:53:22.3402|INFO|ConsoleGameRunner|Player 1 attacked D3
+2018-01-03 15:53:26.0766|INFO|ConsoleGameRunner|Player 2 attacked D3
+2018-01-03 15:53:27.8974|INFO|ConsoleGameRunner|Player 1 attacked D2
+2018-01-03 15:53:31.2176|INFO|ConsoleGameRunner|Player 2 attacked F4
+2018-01-03 15:53:34.1867|INFO|ConsoleGameRunner|Player 1 attacked D4
+2018-01-03 15:56:23.2384|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:56:23.3004|INFO|ConsoleGameRunner|Created a game between 'Player 1' and 'Player 2'.
+2018-01-03 15:56:33.3453|INFO|ConsoleGameRunner|Player 1 placed a ship at A3-A5
+2018-01-03 15:56:40.8425|INFO|ConsoleGameRunner|Player 2 placed a ship at B7-B5
+2018-01-03 15:56:45.2860|INFO|ConsoleGameRunner|Player 1 attacked A3
+2018-01-03 15:56:47.8927|INFO|ConsoleGameRunner|Player 2 attacked A3
+2018-01-03 15:56:50.6626|INFO|ConsoleGameRunner|Player 1 attacked D8
+2018-01-03 15:56:53.0918|INFO|ConsoleGameRunner|Player 2 attacked A4
+2018-01-03 15:56:56.3419|INFO|ConsoleGameRunner|Player 1 attacked E4
+2018-01-03 15:56:59.5538|INFO|ConsoleGameRunner|Player 2 attacked A5
+2018-01-03 15:57:38.7404|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:57:38.8024|INFO|ConsoleGameRunner|Created a game between 'Player 1' and 'Player 2'.
+2018-01-03 15:57:40.4284|INFO|ConsoleGameRunner|Player 1 placed a ship at A3-A5
+2018-01-03 15:57:42.1129|INFO|ConsoleGameRunner|Player 2 placed a ship at A3-A5
+2018-01-03 15:57:44.1048|INFO|ConsoleGameRunner|Player 1 attacked A3
+2018-01-03 15:57:47.5108|INFO|ConsoleGameRunner|Player 2 attacked A3
+2018-01-03 15:57:52.0317|INFO|ConsoleGameRunner|Player 1 attacked A4
+2018-01-03 15:57:54.8530|INFO|ConsoleGameRunner|Player 2 attacked A5
+2018-01-03 15:57:56.7532|INFO|ConsoleGameRunner|Player 1 attacked A5

@@ -81,11 +81,11 @@ namespace ConsoleGameRunner
             var repo = new InMemoryRepository<Game>();
             var logger = new NLogLogger("ConsoleGameRunner");
 
-            Console.WriteLine("Welcome to Battleship");
-            logger.Info("Welcome to Battleship");
-
             // TODO: move to IOC Container if this gets more complicated
             var gameApi = new GameApi(new SimpleGameFactory(), repo, new PublicGameAuthorizer(repo), logger);
+
+            Console.WriteLine("Welcome to Battleship");
+            logger.Info("Welcome to Battleship");
 
             var player1Name = args.Length == 2 ? args[0] : "Player 1";
             var player2Name = args.Length == 2 ? args[1] : "Player 2";
