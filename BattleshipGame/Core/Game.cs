@@ -8,10 +8,12 @@ namespace BattleshipGame.Core
         internal Game()
         {
             this.Id = new Guid();
-            this.Player1AttackRecord = new List<AttackRecord>();
-            this.Player2AttackRecord = new List<AttackRecord>();
-            this.Player1Ship = new Ship();
-            this.Player2Ship = new Ship();
+            this.AttackRecords = new IList<AttackRecord>[2];
+            this.AttackRecords[0] = new List<AttackRecord>();
+            this.AttackRecords[1] = new List<AttackRecord>();
+            this.Ships = new Ship[2];
+            this.Ships[0] = new Ship();
+            this.Ships[1] = new Ship();
             this.Status = GameStatus.Open;
         }
 
@@ -29,13 +31,9 @@ namespace BattleshipGame.Core
 
         public string Player2 { get; set; }
 
-        public Ship Player1Ship { get; private set; }
+        public Ship[] Ships { get; private set; }
 
-        public Ship Player2Ship { get; private set; }
-
-        public IList<AttackRecord> Player1AttackRecord { get; private set; }
-
-        public IList<AttackRecord> Player2AttackRecord { get; private set; }
+        public IList<AttackRecord>[] AttackRecords { get; private set; }
         #endregion
 
         #region Statistics & Info

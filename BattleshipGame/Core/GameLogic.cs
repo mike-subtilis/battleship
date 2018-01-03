@@ -1,9 +1,6 @@
 ﻿using BattleshipGame.Text;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BattleshipGame.Core
 {
@@ -29,18 +26,66 @@ namespace BattleshipGame.Core
             return -1;
         }
 
+        /// <summary>
+        /// Places a ship on the board
+        /// </summary>
+        /// <param name="playerId">The player that is placing a ship</param>
+        /// <param name="shipStart">The location of the front of the ship</param>
+        /// <param name="shipEnd">THe location of the back of the ship</param>
         public void PlaceShip(string playerId, Location shipStart, Location shipEnd)
         {
-            // check to see if this should be allowed given the game state
+            AssertIsValidForPlacingAShip(playerId, shipStart, shipEnd);
+
+            var playerNumber = GetPlayerNumber(playerId);
+            this.Ships[playerNumber - 1].InitializeLocation(shipStart, shipEnd);
+            this.Ships[playerNumber - 1].Status = ShipStatus.Active;
+
+            UpdateGameStateAfterShipPlacement();
+        }
+
+        /// <summary>
+        /// Attack a location on the board
+        /// </summary>
+        /// <param name="playerId">The player making the attack</param>
+        /// <param name="attackLocation">The attack location</param>
+        /// <returns>A record of the attack</returns>
+        public AttackRecord Attack(string playerId, Location attackLocation)
+        {
+            AssertIsValidForAttacking(playerId, attackLocation);
+
+            var playerNumber = GetPlayerNumber(playerId);
+            var otherPlayerNumber = playerNumber == 1 ? 2 : 1;
+
+            var attackResult = this.Ships[otherPlayerNumber - 1].Attack(attackLocation);
+
+            var attackRecord = new AttackRecord(attackLocation.ToString(), attackResult);
+            this.AttackRecords[playerNumber - 1].Add(attackRecord);
+
+            UpdateGameStateAfterAttack();
+
+            return attackRecord;
+        }
+
+        /// <summary>
+        /// Ensures that the game state is valid for placing this ship
+        /// </summary>
+        /// <param name="playerId">The id of the player that is placing a ship</param>
+        /// <param name="shipStart">The location of the front of the ship</param>
+        /// <param name="shipEnd">The location of the back of the ship</param>
+        private void AssertIsValidForPlacingAShip(string playerId, Location shipStart, Location shipEnd)
+        {
+            if (Status != GameStatus.BoardSetup)
+            {
+                throw new InvalidOperationException(Messages.CanOnlyPlaceShipsInBoardSetup);
+            }
+
             var playerNumber = GetPlayerNumber(playerId);
             if (playerNumber != 1 && playerNumber != 2)
             {
                 throw new InvalidOperationException(Messages.PlayerIsNotPartOfThisGame(playerId));
             }
 
-            if ((playerNumber == 1 && Player1Ship.Status != ShipStatus.Available) ||
-                (playerNumber == 2 && Player2Ship.Status != ShipStatus.Available))
-            {
+            if (Ships[playerNumber - 1].Status != ShipStatus.Available) {
                 throw new InvalidOperationException(Messages.PlayerHasAlreadyPlacedShip(playerNumber));
             }
 
@@ -49,22 +94,66 @@ namespace BattleshipGame.Core
             {
                 throw new InvalidOperationException(Messages.ShipIsNotThatBig(shipStart.ToString(), shipEnd.ToString(), shipLength, 3));
             }
+        }
 
-            // place the ship
-            if (playerNumber == 1)
+        private void UpdateGameStateAfterShipPlacement()
+        {
+            // if both players have placed ships, move the game into in progress
+            if (Ships[0].Status == ShipStatus.Active && Ships[1].Status == ShipStatus.Active)
             {
-//                Player1Ship.
-                Player1Ship.Status = ShipStatus.Active;
+                this.Status = GameStatus.InProgress;
+                this.CurrentTurnNumber = 1;
+                this.CurrentTurnPlayer = 1;
+            }
+        }
+
+        private void AssertIsValidForAttacking(string playerId, Location attackLocation)
+        {
+            if (Status != GameStatus.InProgress)
+            {
+                throw new InvalidOperationException(Messages.CanOnlyAttackWhenGameIsInProgress);
+            }
+
+            var playerNumber = GetPlayerNumber(playerId);
+            if (playerNumber != 1 && playerNumber != 2)
+            {
+                throw new InvalidOperationException(Messages.PlayerIsNotPartOfThisGame(playerId));
+            }
+
+            if (playerNumber != this.CurrentTurnPlayer)
+            {
+                throw new InvalidOperationException(Messages.ItIsNotThisPlayersTurn);
+            }
+
+            if (AttackRecords[playerNumber - 1].Select(ar => ar.ToString()).Contains(attackLocation.ToString()))
+            {
+                throw new InvalidOperationException(Messages.PlayerHasAlreadyAttackedThisLocation(playerNumber, attackLocation.ToString()));
+            }
+        }
+
+        private void UpdateGameStateAfterAttack()
+        {
+            if (Ships[0].Status == ShipStatus.Sunk)
+            {
+                this.Winner = this.Player2;
+                this.Status = GameStatus.Completed;
+            }
+            else if (Ships[1].Status == ShipStatus.Sunk)
+            {
+                this.Winner = this.Player1;
+                this.Status = GameStatus.Completed;
             }
             else
             {
-                Player2Ship.Status = ShipStatus.Active;
-            }
-
-            // if both players have placed ships, move the game into in progress
-            if (Player1Ship.Status == ShipStatus.Active && Player2Ship.Status == ShipStatus.Active)
-            {
-                Status = GameStatus.InProgress;
+                if (AttackRecords[0].Count() > AttackRecords[1].Count)
+                {
+                    this.CurrentTurnPlayer = 2;
+                }
+                else
+                {
+                    this.CurrentTurnNumber += 1;
+                    this.CurrentTurnPlayer = 1;
+                }
             }
         }
     }

@@ -50,7 +50,6 @@
     <Compile Include="Core\Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Ship.cs" />
-    <Compile Include="Core\ShipPart.cs" />
     <Compile Include="Core\ShipStatus.cs" />
     <Compile Include="Text\Messages.cs" />
   </ItemGroup>

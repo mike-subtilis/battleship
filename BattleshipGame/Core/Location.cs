@@ -4,6 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace BattleshipGame.Core
 {
+    /// <summary>
+    /// Represents a location on the board
+    /// </summary>
     public class Location
     {
         public static Regex LocationCodeFormat = new Regex("^([A-H])([1-8])$");
@@ -110,10 +113,20 @@ namespace BattleshipGame.Core
             Col = GetColFromCode(locationCode);
         }
 
+        /// <summary>
+        /// 0-indexed internal numeric row index
+        /// </summary>
         public int Row { get; set; }
 
+        /// <summary>
+        /// 0-indexed internal numeric column index
+        /// </summary>
         public int Col { get; set; }
 
+        /// <summary>
+        /// Returns the location code format of this location
+        /// </summary>
+        /// <returns>(e.g. "A3")</returns>
         public override string ToString()
         {
             return $"{(char)(Col + (int)'A')}{Row + 1}";

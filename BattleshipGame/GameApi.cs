@@ -46,7 +46,7 @@ namespace BattleshipGame
 
             var game = _repo.Get(gameId);
 
-            // place ship logic
+            game.PlaceShip(userId, shipStart, shipEnd);
 
             _logger.Info($"Player {game.GetPlayerNumber(userId)} placed a ship at {shipStart.ToString()}-{shipEnd.ToString()}");
 
