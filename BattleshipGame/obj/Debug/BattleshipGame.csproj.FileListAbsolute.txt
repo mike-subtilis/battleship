@@ -5,3 +5,5 @@ C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGame\obj\De
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGame\obj\Debug\BattleshipGame.pdb
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGame\bin\Debug\MyUtil.dll
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGame\bin\Debug\MyUtil.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGame\bin\Debug\NLog.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGame\bin\Debug\NLog.xml

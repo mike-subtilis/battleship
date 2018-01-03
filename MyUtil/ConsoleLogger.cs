@@ -14,7 +14,7 @@ namespace MyUtil
             WriteMessage(message, "Debug");
         }
 
-        public void Error(string message)
+        public void Error(string message, Exception ex)
         {
             WriteMessage(message, "error");
         }

@@ -28,6 +28,11 @@ namespace BattleshipGame.Core
 
         public ShipStatus Status { get; set; }
 
+        public bool IsLocationPartOfShip(Location test)
+        {
+            return this.Parts.Any(p => p.Row == test.Row && p.Col == test.Col);
+        }
+
         /// <summary>
         /// Initialize the location of this ship
         /// </summary>

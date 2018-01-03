@@ -2,6 +2,8 @@
 {
     internal class Messages
     {
+        public const string UserIsNotAuthorized = "This user is not authorized for that activity.";
+
         public const string DiagonalPlacementsAreNotAllowed = "Diagonals are not allowed.";
         public const string CanOnlyPlaceShipsInBoardSetup = "Players can only place ships in the board setup phase";
         public const string CanOnlyAttackWhenGameIsInProgress = "Players can only attack when the game is in progress";

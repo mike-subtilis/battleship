@@ -5,9 +5,11 @@ namespace BattleshipGame.Core
 {
     public partial class Game
     {
+        public const int ColumnCount = 8; // note that the Location class needs to be updated separately if this changes
+        public const int RowCount = 8; // note that the Location class needs to be updated separately if this changes
+
         internal Game()
         {
-            this.Id = new Guid();
             this.AttackRecords = new IList<AttackRecord>[2];
             this.AttackRecords[0] = new List<AttackRecord>();
             this.AttackRecords[1] = new List<AttackRecord>();
@@ -25,8 +27,6 @@ namespace BattleshipGame.Core
         }
 
         #region Game State
-        public Guid Id { get; private set; }
-
         public string Player1 { get; set; }
 
         public string Player2 { get; set; }
@@ -36,7 +36,7 @@ namespace BattleshipGame.Core
         public IList<AttackRecord>[] AttackRecords { get; private set; }
         #endregion
 
-        #region Statistics & Info
+        #region Acccess Properties
         /// <summary>
         /// The status of the game
         /// </summary>
@@ -51,12 +51,6 @@ namespace BattleshipGame.Core
         /// The player (1 or 2) who's turn it is
         /// </summary>
         public int CurrentTurnPlayer { get; set; }
-
-        public DateTime CreatedAt { get; set; }
-
-        public DateTime LastTurnAt { get; set; }
-        
-        public DateTime CompletedAt { get; set; }
 
         public string Winner { get; set; }
         #endregion

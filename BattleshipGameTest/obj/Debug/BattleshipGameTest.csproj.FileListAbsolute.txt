@@ -7,3 +7,9 @@ C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\ob
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\obj\Debug\BattleshipGameTest.pdb
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\MyUtil.dll
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\MyUtil.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\Castle.Core.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\NSubstitute.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\NLog.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\NLog.xml

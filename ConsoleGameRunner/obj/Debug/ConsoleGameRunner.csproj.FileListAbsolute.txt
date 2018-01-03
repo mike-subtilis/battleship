@@ -4,3 +4,9 @@ C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\obj\Debug\ConsoleGameRunner.csprojResolveAssemblyReference.cache
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\obj\Debug\ConsoleGameRunner.exe
 C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\obj\Debug\ConsoleGameRunner.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\BattleshipGame.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\MyUtil.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\NLog.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\BattleshipGame.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\MyUtil.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\NLog.xml

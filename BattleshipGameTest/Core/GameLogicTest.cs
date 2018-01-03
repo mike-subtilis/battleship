@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BattleshipGame.Core;
+using BattleshipGameTest.Mocks;
 
 namespace BattleshipGameTest.Core
 {
@@ -100,9 +101,7 @@ namespace BattleshipGameTest.Core
             [TestInitialize]
             public void Init()
             {
-                _sut = new Game("myPlayer1", "myPlayer2");
-                _sut.PlaceShip("myPlayer1", new Location("A3"), new Location("C3"));
-                _sut.PlaceShip("myPlayer2", new Location("B4"), new Location("B6"));
+                _sut = MockGame.ThatIsOnTheFirstTurn();
             }
 
             [TestMethod]
@@ -148,16 +147,7 @@ namespace BattleshipGameTest.Core
             [TestInitialize]
             public void Init()
             {
-                _sut = new Game("myPlayer1", "myPlayer2");
-                _sut.PlaceShip("myPlayer1", new Location("A3"), new Location("C3"));
-                _sut.PlaceShip("myPlayer2", new Location("B4"), new Location("B6"));
-                _sut.Attack("myPlayer1", new Location("H6"));
-                _sut.Attack("myPlayer2", new Location("H2"));
-                _sut.Attack("myPlayer1", new Location("H1"));
-                _sut.Attack("myPlayer2", new Location("B3")); // hit
-                _sut.Attack("myPlayer1", new Location("B4")); // hit
-                _sut.Attack("myPlayer2", new Location("C3")); // hit
-                _sut.Attack("myPlayer1", new Location("B5")); // hit
+                _sut = MockGame.ThatIsNearlyDone();
             }
 
             [TestMethod]
@@ -183,13 +173,39 @@ namespace BattleshipGameTest.Core
             }
 
             [TestMethod]
-            public void ShouldMakePlayer2TheWinner()
+            public void ShouldAllowPlayer1ToWin()
+            {
+                _sut.Attack("myPlayer2", new Location("H4"));
+                var result = _sut.Attack("myPlayer1", new Location("B6"));
+                Assert.AreEqual("B6", result.ToString());
+                Assert.IsTrue(result.IsHit, "B6 should be a hit");
+                Assert.AreEqual(GameStatus.Completed, _sut.Status);
+                Assert.AreEqual("myPlayer1", _sut.Winner);
+            }
+
+            [TestMethod]
+            public void ShouldAllowPlayer2ToWin()
             {
                 var result = _sut.Attack("myPlayer2", new Location("A3"));
                 Assert.AreEqual("A3", result.ToString());
                 Assert.IsTrue(result.IsHit, "A3 should be a hit");
                 Assert.AreEqual(GameStatus.Completed, _sut.Status);
                 Assert.AreEqual("myPlayer2", _sut.Winner);
+            }
+
+            [TestMethod]
+            [ExpectedException(typeof(InvalidOperationException))]
+            public void ShouldNotAllowAttackingAfterTheGameIsOver()
+            {
+                _sut.Attack("myPlayer2", new Location("A3"));
+                _sut.Attack("myPlayer1", new Location("B6"));
+            }
+
+            [TestMethod]
+            [ExpectedException(typeof(InvalidOperationException))]
+            public void ShouldNotAllowAnUnknownPlayerToAttack()
+            {
+                _sut.Attack("myPlayerUnknown", new Location("B6"));
             }
         }
     }

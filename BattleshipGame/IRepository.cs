@@ -6,7 +6,7 @@ namespace BattleshipGame
     {
         T Get(Guid id);
 
-        void Add(T newObject);
+        Guid Add(T newObject);
 
         void Update(Guid id, T updatedObject);
     }

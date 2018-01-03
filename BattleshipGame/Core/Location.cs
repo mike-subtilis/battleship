@@ -12,6 +12,26 @@ namespace BattleshipGame.Core
         public static Regex LocationCodeFormat = new Regex("^([A-H])([1-8])$");
 
         /// <summary>
+        /// Converts a row index to a row code
+        /// </summary>
+        /// <param name="rowIndex">(e.g. 3)</param>
+        /// <returns>(e.g. "4")</returns>
+        public static string GetRowCodeFromRowIndex(int rowIndex)
+        {
+            return (rowIndex + 1).ToString();
+        }
+
+        /// <summary>
+        /// Converts a column index to a column code
+        /// </summary>
+        /// <param name="colIndex">(e.g. 3)</param>
+        /// <returns>(e.g. "D")</returns>
+        public static string GetColCodeFromColIndex(int colIndex)
+        {
+            return ((char)(colIndex + (int)'A')).ToString();
+        }
+
+        /// <summary>
         /// Gets the zero-indexed location row from the location code
         /// </summary>
         /// <param name="locationCode">(e.g. "A5")</param>
@@ -129,7 +149,7 @@ namespace BattleshipGame.Core
         /// <returns>(e.g. "A3")</returns>
         public override string ToString()
         {
-            return $"{(char)(Col + (int)'A')}{Row + 1}";
+            return $"{GetColCodeFromColIndex(Col)}{GetRowCodeFromRowIndex(Row)}";
         }
     }
 }

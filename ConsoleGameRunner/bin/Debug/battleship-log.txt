@@ -1,0 +1,15 @@
+2018-01-03 15:44:22.8356|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:44:22.8866|INFO|ConsoleGameRunner|Created a game between 'Player 1' and 'Player 2'.
+2018-01-03 15:44:25.8325|WARN|ConsoleGameRunner|An error occurred placing a ship: A1-A8 is 8 squares but the ship should occupy 3 squares
+2018-01-03 15:44:50.8598|INFO|ConsoleGameRunner|Welcome to Battleship
+2018-01-03 15:44:50.8958|INFO|ConsoleGameRunner|Created a game between 'Player 1' and 'Player 2'.
+2018-01-03 15:44:53.8700|INFO|ConsoleGameRunner|Player 1 placed a ship at A3-A5
+2018-01-03 15:44:58.4016|WARN|ConsoleGameRunner|An error occurred placing a ship: B7-B8 is 2 squares but the ship should occupy 3 squares
+2018-01-03 15:45:01.2881|WARN|ConsoleGameRunner|An error occurred placing a ship: B4-B8 is 5 squares but the ship should occupy 3 squares
+2018-01-03 15:45:05.3557|INFO|ConsoleGameRunner|Player 2 placed a ship at B6-B8
+2018-01-03 15:45:07.9470|INFO|ConsoleGameRunner|Player 1 attacked A3
+2018-01-03 15:45:09.3156|INFO|ConsoleGameRunner|Player 2 attacked A3
+2018-01-03 15:45:10.2644|INFO|ConsoleGameRunner|Player 1 attacked A4
+2018-01-03 15:45:11.0935|INFO|ConsoleGameRunner|Player 2 attacked A4
+2018-01-03 15:45:12.0643|INFO|ConsoleGameRunner|Player 1 attacked A5
+2018-01-03 15:45:13.0739|INFO|ConsoleGameRunner|Player 2 attacked A5
