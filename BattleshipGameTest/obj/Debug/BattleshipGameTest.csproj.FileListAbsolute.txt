@@ -1,0 +1,9 @@
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\obj\Debug\BattleshipGameTest.csprojResolveAssemblyReference.cache
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\BattleshipGameTest.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\BattleshipGameTest.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\BattleshipGame.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\BattleshipGame.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\obj\Debug\BattleshipGameTest.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\obj\Debug\BattleshipGameTest.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\MyUtil.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\BattleshipGameTest\bin\Debug\MyUtil.pdb

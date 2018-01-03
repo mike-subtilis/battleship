@@ -1,0 +1,5 @@
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\MyUtil\bin\Debug\MyUtil.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\MyUtil\bin\Debug\MyUtil.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\MyUtil\obj\Debug\MyUtil.csprojResolveAssemblyReference.cache
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\MyUtil\obj\Debug\MyUtil.dll
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\MyUtil\obj\Debug\MyUtil.pdb

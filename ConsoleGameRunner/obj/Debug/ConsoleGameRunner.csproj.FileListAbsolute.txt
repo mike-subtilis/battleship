@@ -1,0 +1,6 @@
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\ConsoleGameRunner.exe.config
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\ConsoleGameRunner.exe
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\bin\Debug\ConsoleGameRunner.pdb
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\obj\Debug\ConsoleGameRunner.csprojResolveAssemblyReference.cache
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\obj\Debug\ConsoleGameRunner.exe
+C:\Dev\Projects\Practice\TCPL-Battleship\ConsoleGameRunner\ConsoleGameRunner\obj\Debug\ConsoleGameRunner.pdb
