@@ -27,4 +27,5 @@ the case of the console, we trust the user's input completely.
 * I considered hooking up an IOC container, but opted not to given the time alotted and the one line that would use it
 * More is public in the core game logic than probably should be.  I didn't have time to do a pass over it to see how much
 more I could lock down.  The main thought is that the user should only be able to really interact through the GameApi class
-and the game state would be transmitted through that.\
+and the game state would be transmitted through that.
+* I don't have Resharper or FxCop or anything similar installed locally, so there may be some styling inconsistencies.
